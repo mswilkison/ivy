@@ -8,7 +8,7 @@
    :password "admin"}))
 
 (defn initialized? []
-  false)
+  true)
 
 (defn create-users-table []
   (sql/with-connection db-spec
