@@ -11,7 +11,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-						</button> 
+						</button>
 						<a class="navbar-brand" href="{{servlet-context}}/">ivy</a>
 					</div>
 					{% block menu %}
@@ -35,5 +35,23 @@
               $("#{{selected-page}}").addClass("active");
             });
         </script>
+        <!-- dailycred -->
+        <script>
+            var dc, dc_opts, s, url;
+            dc_opts = {
+              clientId: "bd77601b-b9f0-43cb-b684-427acde2e260",
+              home: "https://www.dailycred.com",
+              personaAudience: "",
+              type: "",
+              event_title: ""
+            };
+            dc = document.createElement("script");
+            url = dc_opts.home + "/cred.js";
+            dc.src = url;
+            s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(dc, s);
+            window.dc_opts = dc_opts;
+        </script>
+        <!-- end dailycred -->
 	</body>
 </html>
