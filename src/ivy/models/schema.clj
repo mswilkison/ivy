@@ -1,14 +1,14 @@
 (ns ivy.models.schema
   (:require [clojure.java.jdbc :as sql]))
 
-(def db-spec
+(def db-spec (or (System/getenv "DATABASE_URL")
   {:subprotocol "postgresql"
    :subname "//localhost/ivy"
    :user "admin"
-   :password "admin"})
+   :password "admin"}))
 
 (defn initialized? []
-  (throw (new Exception "TODO: initialize the database schema!")))
+  true)
 
 (defn create-users-table []
   (sql/with-connection db-spec
