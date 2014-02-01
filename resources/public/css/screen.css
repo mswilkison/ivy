@@ -1,10 +1,3 @@
-html,
-body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    height: 100%;
-    padding-top: 70px;
-}
-
-.error {
-    color: red;
+.glyph-featurette {
+  font-size: 10em;
 }
