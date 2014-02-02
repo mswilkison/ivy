@@ -1,3 +1,18 @@
 .glyph-featurette {
   font-size: 10em;
+  color: #874587;
+}
+
+#hero {
+  background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.bg {
+  background: #eee;
+}
+
+.featurette-image {
+  width:500px;
 }
