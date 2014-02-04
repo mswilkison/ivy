@@ -27,7 +27,8 @@
    [selmer "0.5.9"]
    [lib-noir "0.7.9"]
    [com.postspectacular/rotor "0.1.0"]
-   [postgresql/postgresql "9.1-901.jdbc4"]]
+   [postgresql/postgresql "9.1-901.jdbc4"]
+   [com.draines/postal "1.11.1"]]
   :cljsbuild
   {:builds
    [{:source-paths ["src-cljs"],

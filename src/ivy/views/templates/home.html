@@ -1,14 +1,108 @@
 {% extends "ivy/views/templates/base.html" %}
 {% block content %}
- <div class="jumbotron">
-    <h1>Welcome to ivy</h1>
-    <p>Time to start building your site!</p>
-    <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
- </div>
-
- <div class="row-fluid">
-    <div class="span8">
-    {{content|safe}}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+         <br />
+         <br />
+          <div class="row">
+             <h1>Ivy English School</h1>
+              <p>
+                  Welcome to the premier online English school in the world!
+                  Whether your goal is to ace the SAT, successfully apply to elite US universities,
+                  advance your career in a global marketplace, or just improve your communication skills,
+                  our team can help you get there.
+              </p>
+              <p>
+                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demoModal">
+                      <span class="glyphicon glyphicon-play-circle"></span> Demo
+                  </button>
+              </p>
+         </div>
+      </div>
     </div>
- </div>
+
+    {% include "ivy/views/templates/demo.html" %}
+
+    <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row" style="margin-top:80px">
+            <div class="col-lg-4">
+                <span class="glyphicon glyphicon-globe glyph-featurette"></span>
+                <h2>American English Focus</h2>
+                <p>Our focus on American English will best prepare you for college entrance exams like the SAT and the rigors of studying at a top university in the US.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <span class="glyphicon glyphicon-comment glyph-featurette"></span>
+                <h2>Native Speaking Teachers</h2>
+                <p>Native speakering teachers educated at top American universities and small group classes will ensure loads of personal attention to achieve your goals.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <span class="glyphicon glyphicon-heart-empty glyph-featurette"></span>
+                <h2>Personalized Approach</h2>
+                <p>Regardless of your current ability level or long-term goals, we'll work hard to develop the absolute best strategy to help you improve.</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </div>
+
+
+        <!-- START THE FEATURETTES -->
+
+        <div class="bg">
+            <hr class="featurette-divider">
+            <div class="container">
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">Live online classes. <span class="text-muted">Support to reach your goals.</span></h2>
+                        <p class="lead">Our small group classes are led by experienced native speakers with a track record of teaching success. Immersion is the fastest, most effective way to learn a language so there's a focus on real-world situations and conversation practice.</p>
+                    </div>
+                    <div class="col-md-5">
+                        <img class="featurette-image img-responsive" src="img/featurette1.jpg" alt="Generic placeholder image">
+                    </div>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+        </div>
+
+        <div class="container">
+                <div class="row featurette">
+                    <div class="col-md-5">
+                        <img class="featurette-image img-responsive" src="img/featurette2.jpg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">Ace the SAT. <span class="text-muted">Get accepted to top US universities.</span></h2>
+                        <p class="lead">Our teachers are all educated at top institutions of higher learning. We'll help you put together a plan to successfully application from SAT and TOEFL prep, to essay reviews, to interview practice.</p>
+                    </div>
+                </div>
+        </div>
+
+<div class="bg">
+        <hr class="featurette-divider">
+
+<div class="container">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Customized curriculums. <span class="text-muted">Tailored to your needs.</span></h2>
+                <p class="lead">We're prepared to help with any of your langauge goals. If your needs don't fit into one of our standard packages let us know and we'll work with you to come up with a solutions that makes sense.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive" src="img/featurette3.jpg" alt="Generic placeholder image">
+            </div>
+        </div>
+</div>
+        <hr class="featurette-divider">
+</div>
+
+
+        <!-- /END THE FEATURETTES -->
+
+
+        <!-- FOOTER -->
+<div class="container">
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2014 Ivy English<!-- &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>-->
+        </footer>
+
+    </div><!-- /.container -->
 {% endblock %}

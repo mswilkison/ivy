@@ -1,39 +1,68 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Welcome to ivy</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="{{servlet-context}}img/favicon.ico">
+
+        <title>Ivy English</title>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
 	</head>
 	<body>
-			<div class="navbar navbar-default navbar-fixed-top">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button> 
-						<a class="navbar-brand" href="{{servlet-context}}/">ivy</a>
-					</div>
-					{% block menu %}
-					{% include "ivy/views/templates/menu.html" %}
-					{% endblock %}
-				</div>
-			</div>
-			<div class="container">
-				{% block content %}
-				{% endblock %}
-			</div>
+        {% block menu %}
+        {% include "ivy/views/templates/menu.html" %}
+        {% endblock %}
+		{% block content %}
+		{% endblock %}
 		<!-- scripts and styles -->
-        {% style "/css/bootstrap-theme.min.css" %}
         {% style "/css/bootstrap.min.css" %}
+        {% style "/css/carousel.css" %}
         {% style "/css/screen.css" %}
         <script src="//code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
         {% script "/js/bootstrap.min.js" %}
+        {% script "/js/docs.min.js" %}
         <script type="text/javascript">
             var context = "{{servlet-context}}";
             $(function() {
               $("#{{selected-page}}").addClass("active");
             });
+
+            // Youtube demo
+            $('#demoModal').on('shown.bs.modal', function () {
+                $('div.video-container').html(
+                    '<iframe id="player" width="560" height="315" src="//www.youtube.com/embed/rwa9MQiCq4k?html5=1" frameborder="0" allowfullscreen></iframe>'
+                );
+            });
+            $('#demoModal').on('hidden.bs.modal', function () {
+                $('div.video-container').html('');
+            });
+    </script>
+        <!-- dailycred -->
+        <script>
+            var dc, dc_opts, s, url;
+            dc_opts = {
+              clientId: "bd77601b-b9f0-43cb-b684-427acde2e260",
+              home: "https://www.dailycred.com",
+              personaAudience: "",
+              type: "",
+              event_title: ""
+            };
+            dc = document.createElement("script");
+            url = dc_opts.home + "/cred.js";
+            dc.src = url;
+            s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(dc, s);
+            window.dc_opts = dc_opts;
         </script>
+        <!-- end dailycred -->
 	</body>
 </html>
