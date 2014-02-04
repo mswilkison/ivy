@@ -29,13 +29,20 @@
         {% style "/css/screen.css" %}
         <script src="//code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
         {% script "/js/bootstrap.min.js" %}
+        {% script "/js/bootstrap.youtubepopup.min.js" %}
         {% script "/js/docs.min.js" %}
         <script type="text/javascript">
             var context = "{{servlet-context}}";
             $(function() {
               $("#{{selected-page}}").addClass("active");
             });
-        </script>
+
+            // Youtube plugin
+            $(function () {
+                $(".youtube").YouTubeModal({autoplay:0, width:640, height:480});
+            });
+
+       </script>
         <!-- dailycred -->
         <script>
             var dc, dc_opts, s, url;
