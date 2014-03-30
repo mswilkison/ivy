@@ -9,6 +9,10 @@
   (layout/render
     "home.html" {:content (util/md->html "/md/docs.md")}))
 
+(defn corporate-page []
+  (layout/render
+    "corporate.html"))
+
 (defn about-page []
   (layout/render "about.html"))
 
@@ -25,6 +29,7 @@
 
 (defroutes home-routes
   (GET "/" [] (home-page))
+  (GET "/corporate" [] (corporate-page))
   (GET "/about" [] (about-page))
   (POST "/contact" [email subject message]
         (handle-contact email subject message)))
