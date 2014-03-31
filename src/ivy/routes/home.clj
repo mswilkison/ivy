@@ -5,11 +5,11 @@
             [postal.core :as postal]
             [noir.response :as resp]))
 
-(defn home-page []
+(defn student-page []
   (layout/render
-    "home.html" {:content (util/md->html "/md/docs.md")}))
+    "student.html" {:content (util/md->html "/md/docs.md")}))
 
-(defn corporate-page []
+(defn home-page []
   (layout/render
     "corporate.html"))
 
@@ -29,7 +29,7 @@
 
 (defroutes home-routes
   (GET "/" [] (home-page))
-  (GET "/corporate" [] (corporate-page))
+  (GET "/students" [] (student-page))
   (GET "/about" [] (about-page))
   (POST "/contact" [email subject message]
         (handle-contact email subject message)))
