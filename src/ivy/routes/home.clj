@@ -30,6 +30,7 @@
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/students" [] (student-page))
+  (POST "/students" [] (student-page))
   (GET "/about" [] (about-page))
   (POST "/contact" [email subject message]
         (handle-contact email subject message)))
