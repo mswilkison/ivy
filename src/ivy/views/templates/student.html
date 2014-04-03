@@ -2,28 +2,7 @@
 {% block content %}
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-      <div class="container">
-         <br />
-         <br />
-          <div class="row">
-             <h1>Ivy English for Students</h1>
-	     <p>We provide small-group classes and individual private tutoring
-	     	for students.<p>
-	     <br />
-	     {% include "ivy/views/templates/student-pricing-table.html" %}
-              <!--<p>
-                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demoModal">
-                      <span class="glyphicon glyphicon-play-circle"></span> Demo
-		  </button>
-              </p>-->
-         </div>
-      </div>
-    </div>
-
-    <!--    {% include "ivy/views/templates/demo.html" %}-->
-
-    <div class="container marketing">
-        <!-- Three columns of text below the carousel -->
+      <div class="container marketing">
         <div class="row" style="margin-top:80px">
             <div class="col-lg-4">
                 <span class="glyphicon glyphicon-globe glyph-featurette"></span>
@@ -41,7 +20,22 @@
                 <p>Regardless of your current ability level or long-term goals, we'll work hard to develop the absolute best strategy to help you improve.</p>
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
+      </div>
     </div>
+
+    <!--    {% include "ivy/views/templates/demo.html" %}-->
+
+
+      <div class="container marketing">
+          <div class="row" style="margin-top:60px">
+	     {% include "ivy/views/templates/student-pricing-table.html" %}
+              <!--<p>
+                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demoModal">
+                      <span class="glyphicon glyphicon-play-circle"></span> Demo
+		  </button>
+              </p>-->
+         </div>
+      </div>
 
 
         <!-- START THE FEATURETTES -->
@@ -103,4 +97,5 @@
         </footer>
 
 </div><!-- /.container -->
+
 {% endblock %}

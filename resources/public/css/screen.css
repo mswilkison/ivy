@@ -43,16 +43,4 @@
   top: -11px;
 }
 
-div.panel-body p.lead {
-	font-size: 33px;
-	margin-bottom:0px;
-}
-
-.panel-purple {
-  border-color:#874587; 
-}
-.panel-purple>.panel-heading {
-  color:#fff;
-  background-color:#874587; 
-  border-color:#874587; 
-}
+div.panel-body p.lead { font-size: 33px;margin-bottom:0px; }
