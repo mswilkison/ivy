@@ -42,3 +42,5 @@
   position: relative;
   top: -11px;
 }
+
+div.panel-body p.lead { font-size: 33px;margin-bottom:0px; }
