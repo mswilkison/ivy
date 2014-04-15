@@ -25,6 +25,9 @@
 (defn about-page []
   (layout/render "about.html"))
 
+(defn demo-page []
+  (layout/render "ivy-demo.html"))
+
 (defn handle-contact [email subject message]
   (postal/send-message ^{:host "smtp.gmail.com"
                          :user "mwilkison"
@@ -38,6 +41,7 @@
 
 (defroutes home-routes
   (GET "/" [] (home-page))
+  (GET "/demo" [] (demo-page))
   (GET "/students" [] (student-page))
   (POST "/students" [& params] (student-page params))
   (POST "/charge" [& params] (charge params))
